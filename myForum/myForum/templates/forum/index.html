@@ -1,0 +1,172 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+
+
+
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru"><head>
+<title>Forum</title>
+
+<meta name="viewport" content="initial-scale=1">
+<script async src="js/analytics.js"></script><script src="js/OhTDqY1xTQn_MPul88oOj4jWyus.js"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="css/font-awesome.min.css" title="makaba" type="text/css" rel="stylesheet">
+<!--<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>-->
+<!--<script src="js/jqcloud-1.0.3.min.js"></script>-->
+<!--<script src="js/index.js"></script>-->
+<!--<script src="js/jquery-ui.js"></script>-->
+<!--<script type="text/javascript" src="js/threadsubscribe.js"></script>-->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css" />
+
+
+	<style>.add-board{margin-left:5px}.box-data{font-size:12px}.box-data .data{border-top:1px solid #ccc;margin-top:10px;padding-top:10px}.box-data .data .row{overflow:auto}.box-data .data .row .img{float:left;margin-bottom:5px;margin-right:5px}.box-data .data .row .thumb{width:100px;height:auto}.hr{clear:both;border:none;border-top:1px solid #ddd;height:0}.reply{font-size:.9em;color:#707070;margin-bottom:5px}.date{font-size:.8em;color:#707070}select{padding:1px 6px;border:1px solid #cacaca;background:#eaeaea none repeat scroll 0% 0%}</style>
+<script>
+
+			(function() {
+				    window.st = localStorage.getItem('store') || '{}';
+					st = JSON.parse(st);
+
+
+
+
+
+					const nm=e=>{e.hasOwnProperty("styling")?void 0===e.styling.nightmode?window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches&&(document.documentElement.dataset.theme="nightmode"):!0===e.styling.nightmode&&(document.documentElement.dataset.theme="nightmode"):window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches&&(document.documentElement.dataset.theme="nightmode")};nm(st);
+				})();
+			</script>
+<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-53637455-1', 'auto');
+			ga('send', 'pageview');
+
+		</script>
+</head>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <div class="container">
+	    <a class="navbar-brand" href="/">Форум</a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarNav">
+	      <ul class="navbar-nav">
+	        <li class="nav-item active">
+	          <a class="nav-link" href="/">Главная</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Топики</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Темы</a>
+	        </li>
+	      </ul>
+                <ul class="navbar-nav ml-auto">
+			<li class="nav-item" style="position: absolute; top: 0; right: 0;">
+			  <a class="nav-link" href="">Аккаунт</a>
+			</li>
+
+      </ul>
+	    </div>
+	  </div>
+      <style>body {
+    background-color: #1A2C43;
+    color: #fff;
+}
+</style>
+	</nav>
+<body>
+<header class="header">
+<div class="header__item header__sub">надпись</div>
+</header>
+<main class="main">
+<section class="main__block main__meta">
+<span class="paragraph">Название</span> описание
+        {% block content %}
+
+        {% endblock content %}
+<!--<div class="buttons"><a class="buttons__button" href="/static/m.html" target="blank">Мобильные приложения</a><a class="buttons__button" href="/static/market.html" target="blank">Купить пасскод</a><div>-->
+</div></div></section>
+<section class="main__block">
+<!--<img class="img" src="images/anon.jpg" alt>-->
+</section>
+<section class="main__block boards">
+<div class="boards__col">
+<ul class="boards__ul">
+<li class="boards__title">Программирование</li>
+<li><a href="/se">Услуги</a></li>
+<li><a href="/bi/">Поиск работы</a></li>
+<li><a href="/biz/">Продажа аккаунтов</a> </li>
+
+</ul>
+</div>
+<div class="boards__col">
+<ul class="boards__ul">
+<li><a href="/sn/">Паранормальное</a></li>
+<li><a href="/sp/">Спорт</a></li>
+<li><a href="/spc/">Космос</a></li>
+<li><a href="/tv/">Сериалы</a></li>
+<li><a href="/un/">Образование</a></li>
+<li><a href="/w/">Оружие</a></li>
+<li><a href="/wh/">Warhammer</a></li>
+<li><a href="/wm/">Военная техника</a></li>
+<li><a href="/wp/">Обои и хайрез</a></li>
+<li><a href="/zog/">Теории заговора</a></li>
+<br>
+<li class="boards__title">Творчество</li>
+<li><a href="/de/">Дизайн</a></li>
+<li><a href="/di/">Столовая</a></li>
+<li><a href="/diy/">Хобби</a></li>
+<li><a href="/izd/">Графомания</a></li>
+<li><a href="/mus/">Музыканты</a></li>
+<li><a href="/pa/">Живопись</a></li>
+<li><a href="/p/">Фотография</a></li>
+<li><a href="/wrk/">Работа</a></li>
+<br>
+<li class="boards__title">Политика и новости</li>
+<li><a href="/po/">Политика</a></li>
+<li><a href="/news/">Новости</a></li>
+<li><a href="/int/">International</a></li>
+<li><a href="/hry/">Х Р Ю</a></li>
+<br>
+</ul>
+</div>
+<div class="boards__col">
+<ul class="boards__ul">
+<li class="boards__title">Техника и софт</li>
+<li><a href="/ai/">Искусственный интеллект</a></li>
+<li><a href="/gd/">Gamedev</a></li>
+<li><a href="/hw/">Комп. железо</a></li>
+<li><a href="/mobi/">Моб. устройства</a></li>
+<li><a href="/pr/">Программирование</a></li>
+<li><a href="/ra/">Радиотехника</a></li>
+<li><a href="/s/">Программы</a></li>
+<li><a href="/t/">Техника</a></li>
+<br>
+<li class="boards__title">Игры</li>
+<li><a href="/bg/">Настольные игры</a></li>
+<li><a href="/cg/">Консоли</a></li>
+<li><a href="/gacha/">Гача-игры</a></li>
+<li><a href="/gsg/">Grand Strategy Games</a></li>
+<li><a href="/ruvn/">RU виз.новеллы</a></li>
+<li><a href="/tes/">The Elder Scrolls</a></li>
+<li><a href="/v/">Video Games</a></li>
+<li><a href="/vg/">Video Games General</a></li>
+<li><a href="/wr/">Текстовые РПГ</a></li>
+<br>
+<li class="boards__title">Взрослым <span style="font-size:10px; color:red;"> (18+)</span></li>
+<li><a href="/fg/">Трапы</a></li>
+<li><a href="/fur/">Фурри</a></li>
+<li><a href="/gg/">Красивые девушки</a></li>
+<li><a href="/ga/">Геи</a></li>
+<li><a href="/hc/">Hardcore</a></li>
+<li><a href="/e/">Extreme pron</a></li>
+<li><a href="/fet/">Фетиш</a></li>
+<li><a href="/sex/">Секс и отношения</a></li>
+<li><a href="/fag/">Фагготрия</a></li>
+<br>
+<!--<script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>-->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+</script>
