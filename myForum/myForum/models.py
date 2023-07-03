@@ -36,6 +36,13 @@ class Topic(models.Model):
         super().save(*args, **kwargs)
 
 
+class Comment(models.Model):
+    post = models.ForeignKey(Topic, on_delete=models.CASCADE, related_name='comments')
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
 class Post(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
@@ -46,3 +53,4 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+

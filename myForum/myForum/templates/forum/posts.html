@@ -2,19 +2,22 @@
 {% load static %}
 
 {% block content %}
-<div><b>services</b></div>
-<a href="{% url 'services_create_topic_post' %}" class="btn btn-primary">Создать тему</a>
+<div><b>название темы</b></div>
+<a href="{% url '<category>_create_topic_post' category=category %}" class="btn btn-primary">Создать тему</a>
+
 
 <ul class="topics-list">
   {% for topic in topics %}
+
     <li class="topic-item">
       {% if topic.image %}
         <img class="topic-image" src="{{ topic.image.url }}" alt="{{ topic.subject }}">
       {% endif %}
       <div class="topic-details">
         <h2 class="topic-title">{{ topic.subject }}</h2>
-        <p class="topic-description">{{ topic.content }}</p>
+        <p class="topic-description">{{ topic.content|slice:":20" }}</p>
         <small class="topic-date text-muted">{{ topic.created_at }}</small>
+        <a href="{% url 'post_detail' category=category post_id=topic.pk %}" class="btn btn-primary">Подробнее</a>
       </div>
     </li>
   {% empty %}
@@ -24,3 +27,4 @@
 
 {% endblock %}
 
+<!--url category|add:'_create_topic_post'-->
