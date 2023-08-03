@@ -5,7 +5,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'myForum', 'static')]
 
-SECRET_KEY = 'django-insecure-eq6pjntc1nw2@+g=kv6l-b8*18l9t&eh#7v9qh)om2yypy8v4a'
+#SECRET_KEY = 'django-insecure-eq6pjntc1nw2@+g=kv6l-b8*18l9t&eh#7v9qh)om2yypy8v4a'
+SECRET_KEY = os.getenv('DJANGO_KEY')
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 DEBUG = True
@@ -113,7 +114,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'forum',
         'USER': 'postgres',
-        'PASSWORD': 'Belyutin7777',
+        'PASSWORD': os.getenv('Postrges_pswd'),
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
